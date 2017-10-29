@@ -5,6 +5,8 @@
   "author": "Aksels Ledins <aksels.ledins@gmail.com>",
   "private": true,
   "scripts": {
+    "prod": "node production-server.js",
+    "in-docker": "docker-compose up",
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
     "build": "node build/build.js",
