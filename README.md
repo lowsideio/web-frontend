@@ -1,30 +1,18 @@
-# lowside-web-frontend
+<img src="https://github.com/lowsideio/graphic-chart/raw/master/logo-png/lowside-logo-red.png" alt="logo-lowside-black" width="25%" align="right" />
 
-> Lowside.io web client
+# web-client of lowside.io
 
-## Build Setup
+This web client allows the user to search the database.
 
-``` bash
-# install dependencies
-npm install
+<br />
+<br />
+<br />
+<br />
+<br />
+<hr />
 
-# serve with hot reload at localhost:8080
-npm run dev
+# Preview
 
-# build for production with minification
-npm run build
+<a href="https://lowside.io">lowside.io</a>
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![search-illustration](./illustrations/search.gif)

@@ -1,0 +1,113 @@
+
+<template>
+  <div class="container">
+    <div class="brand">
+      <div class="brand-logo" v-bind:style="{ backgroundImage: `url(${this.getLogo(motorcycle.brand)})` }" />
+    </div>
+    <div class="info">
+      <div class="model">
+        <div class="brand-name">{{ motorcycle.brand }}</div>
+        {{ motorcycle.model }}
+      </div>
+      <div class="meta">
+        <div class="cc">{{motorcycle.cc}}<small>cc</small></div>
+        <div class="power">{{motorcycle.power}}<small>ps</small></div>
+      </div>
+    </div>
+    <div class="category">
+      <img v-bind:src="this.getCategoryIllustration(motorcycle.category)" />
+    </div>
+  </div>
+</template>
+
+<script type = "text/javascript" >
+
+import { brands, categories } from '../helpers';
+
+export default {
+  name: 'search-result',
+  props: ['motorcycle'],
+  methods: {
+    getLogo: brands.logo,
+    getCategoryIllustration: categories.illustration,
+  },
+};
+</script>
+
+<style scoped>
+
+  .container {
+    position: relative;
+
+    background-color: #F6F7F8;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: .5rem;
+    overflow: visible;
+  }
+
+  .brand-logo {
+    display: inline-block;
+
+    width: 50%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .brand-name {
+    font-weight: bolder;
+    display: inline-block;
+  }
+
+  .info, .category {
+    display: inline-block;
+    padding: 1rem;
+  }
+
+  .brand {
+    position: absolute;
+
+    width: calc(25% - 2rem);
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    color: #FFF;
+  }
+
+  .category {
+    position: absolute;
+
+    height: calc(100% - 2rem);
+    min-width: 100px;
+
+    right: 0;
+    top: 0;
+  }
+
+  .category img {
+    max-height: 100%;
+  }
+
+  .info {
+    padding-left: calc(25% - 2rem - 1rem);
+    padding-right: calc(25% - 2rem - 1rem);
+    width: calc(75% - 2rem);
+  }
+
+  .model {
+    padding: .5rem;
+  }
+
+  .power {
+    display: inline-block;
+  }
+
+  .cc {
+    display: inline-block;
+  }
+
+
+</style>
