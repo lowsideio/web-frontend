@@ -8,6 +8,7 @@
     </span>
 
     <li v-for="error of errors">
+     {{JSON.stringify(error)}}
      {{error.message}}
    </li>
   </div>
