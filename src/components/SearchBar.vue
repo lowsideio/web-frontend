@@ -29,7 +29,7 @@ export default {
     async search() {
       if (!this.inputValue) { return; }
       try {
-        const response = await axios.get(`http://localhost:1323/search/${this.inputValue}`);
+        const response = await axios.get(`https://api.lowside.io/search/${this.inputValue}`);
         this.results = response.data;
       } catch (e) {
         this.errors.push(e);
