@@ -31,7 +31,6 @@ export default {
       try {
         const response = await axios.get(`http://localhost:1323/search/${this.inputValue}`);
         this.results = response.data;
-        console.log('this.results', this.results);
       } catch (e) {
         this.errors.push(e);
       }
