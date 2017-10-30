@@ -30,6 +30,13 @@ export default {
     async search() {
       if (!this.inputValue) { return; }
       try {
+        if (window.gtag) {
+          window.gtag('event', 'search', {
+            event_category: 'user-action',
+            event_action: 'search',
+            event_label: 'main-search-bar',
+          });
+        }
         const response = await axios.get(`https://api.lowside.io/search/${this.inputValue}`);
         this.results = response.data;
       } catch (e) {
