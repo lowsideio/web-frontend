@@ -9,10 +9,6 @@
         <div class="brand-name">{{ motorcycle.brand }}</div>
         {{ motorcycle.model }}
       </div>
-      <div class="meta">
-        <div class="cc">{{motorcycle.cc}}<small>cc</small></div>
-        <div class="power">{{motorcycle.power}}<small>ps</small></div>
-      </div>
     </div>
     <div class="category">
       <img v-bind:src="this.getCategoryIllustration(motorcycle.category)" />
@@ -69,12 +65,13 @@ export default {
   .brand {
     position: absolute;
 
-    width: calc(25% - 2rem);
+    width: 4rem;
     height: 100%;
     left: 0;
     top: 0;
 
     color: #FFF;
+    border-right: 1px solid #B2B2B2;
   }
 
   .category {
@@ -98,6 +95,7 @@ export default {
   }
 
   .model {
+    text-align: left;
     padding: .5rem;
   }
 
