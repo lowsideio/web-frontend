@@ -1,7 +1,9 @@
 <template>
   <div>
     <input v-model="inputValue" type="text" @input="search()">
-
+    <div class="sponsor-algolia">
+      <img src="/static/sponsors/search-by-algolia-white.png" />
+    </div>
     {{/* Display results */}}
     <span v-for="result of results">
       <search-result :motorcycle="result" />
@@ -37,7 +39,7 @@ export default {
             event_label: 'main-search-bar',
           });
         }
-        const response = await axios.get(`https://api.lowside.io/search/${this.inputValue}`);
+        const response = await axios.get(`${process.env.API_URL}/search-algolia/${this.inputValue}`);
         this.results = response.data;
       } catch (e) {
         this.errors.push(e);
@@ -60,6 +62,18 @@ input {
   box-shadow: 1px 2px 1px 0px;
   color: #011627;
   text-transform: uppercase;
+}
+
+.sponsor-algolia {
+  height: 1rem;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: .75rem;
+  text-align: right;
+}
+
+.sponsor-algolia img {
+  height: 100%;
 }
 
 </style>
