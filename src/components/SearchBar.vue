@@ -39,7 +39,7 @@ export default {
             event_label: 'main-search-bar',
           });
         }
-        const response = await axios.get(`https://api.lowside.io/search/${this.inputValue}`);
+        const response = await axios.get(`${process.env.API_URL}/search-algolia/${this.inputValue}`);
         this.results = response.data;
       } catch (e) {
         this.errors.push(e);
