@@ -1,12 +1,11 @@
 <template>
-  <div class="hello">
-    <h1>lowside.io</h1>
+  <div>
     <search-bar></search-bar>
   </div>
 </template>
 
 <script>
-import SearchBar from './SearchBar';
+import SearchBar from '@/organisms/SearchBar';
 
 
 export default {

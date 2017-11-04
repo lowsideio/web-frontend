@@ -1,23 +1,31 @@
 
 <template>
-  <div class="container">
-    <div class="brand">
-      <div class="brand-logo" v-bind:style="{ backgroundImage: `url(${this.getLogo(motorcycle.brand)})` }" />
-    </div>
-    <div class="info">
-      <div class="model">
-        <div class="brand-name">{{ motorcycle.brand }}</div>
-        {{ motorcycle.model }}
+  <router-link v-bind:to="`/motorcycles/${motorcycle.slug}`">
+    <div class="container">
+      <div class="brand">
+        <div
+          class="brand-logo"
+
+          v-if="this.getLogo(motorcycle.brand)"
+          v-bind:style="{ backgroundImage: `url(${this.getLogo(motorcycle.brand)})` }"
+        />
+        <div
+          class="brand-no-logo"
+
+          v-else
+        />
       </div>
-      <div class="meta">
-        <div class="cc">{{motorcycle.cc}}<small>cc</small></div>
-        <div class="power">{{motorcycle.power}}<small>ps</small></div>
+      <div class="info">
+        <div class="model">
+          <div class="brand-name">{{ motorcycle.brand }}</div>
+          {{ motorcycle.model }}
+        </div>
+      </div>
+      <div class="category">
+        <img v-bind:src="this.getCategoryIllustration(motorcycle.category)" />
       </div>
     </div>
-    <div class="category">
-      <img v-bind:src="this.getCategoryIllustration(motorcycle.category)" />
-    </div>
-  </div>
+  </router-link>
 </template>
 
 <script type = "text/javascript" >
@@ -46,7 +54,21 @@ export default {
     overflow: visible;
   }
 
-  .brand-logo {
+  .container:hover {
+    background-color: rgb(32, 164, 243);
+
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+
+    cursor: pointer;
+  }
+
+  .brand-no-logo {
+    background-image: url('/static/icons/unknown.png');
+  }
+
+  .brand-logo, .brand-no-logo {
     display: inline-block;
 
     width: 50%;
@@ -69,12 +91,13 @@ export default {
   .brand {
     position: absolute;
 
-    width: calc(25% - 2rem);
+    width: 4rem;
     height: 100%;
     left: 0;
     top: 0;
 
     color: #FFF;
+    border-right: 1px solid #B2B2B2;
   }
 
   .category {
@@ -98,6 +121,7 @@ export default {
   }
 
   .model {
+    text-align: left;
     padding: .5rem;
   }
 

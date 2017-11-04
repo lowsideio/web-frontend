@@ -1,5 +1,5 @@
 
-const basePath = 'static/brands';
+const basePath = '/static/brands';
 
 const logo = (brand) => {
   switch (brand) {

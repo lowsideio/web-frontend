@@ -2,7 +2,9 @@
   <div>
     <input v-model="inputValue" type="text" @input="search()">
     <div class="sponsor-algolia">
-      <img src="/static/sponsors/search-by-algolia-white.png" />
+      <a href="https://algolia.com" target="_blank">
+        <img src="/static/sponsors/search-by-algolia-white.png" />
+      </a>
     </div>
     {{/* Display results */}}
     <span v-for="result of results">

@@ -1,5 +1,5 @@
 
-const basePath = 'static/categories';
+const basePath = '/static/categories';
 
 const illustration = (category) => {
   switch (category) {
@@ -13,12 +13,14 @@ const illustration = (category) => {
     case 'TOURING': return `${basePath}/touring.svg`;
     case 'CROSS': return `${basePath}/cross.svg`;
 
-    case 'ENDURO': return `${basePath}/enduro.svg`; // TODO svg
-    case 'NAKED': return `${basePath}/naked.svg`; // TODO svg
-    case 'UNKNOWN': return `${basePath}/unknown.svg`; // TODO svg
-    case 'MINI': return `${basePath}/mini.svg`; // TODO svg
-    case 'TRIAL': return `${basePath}/trial.svg`; // TODO svg
-    case 'PROTO': return `${basePath}/proto.svg`; // TODO svg
+    case 'ENDURO': return `${basePath}/enduro.svg`;
+    case 'NAKED': return `${basePath}/naked.svg`;
+    case 'TRIAL': return `${basePath}/trial.svg`;
+    case 'PROTO': return `${basePath}/proto.svg`;
+
+    case 'MINI': return `${basePath}/mini.svg`;
+
+    case 'UNKNOWN': return '/static/icons/unknown.png';
 
     default: return null;
   }
