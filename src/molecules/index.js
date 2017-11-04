@@ -6,7 +6,7 @@ export { default as Cooling } from './Cooling';
 export { default as DryWeight } from './DryWeight';
 export { default as Bore } from './Bore';
 export { default as EngineType } from './EngineType';
-export { default as FrameType } from './EngineType';
+export { default as FrameType } from './FrameType';
 export { default as FrontBrakes } from './FrontBrakes';
 export { default as FrontBrakesDiameter } from './FrontBrakesDiameter';
 export { default as FrontSuspension } from './FrontSuspension';

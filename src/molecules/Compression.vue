@@ -1,8 +1,10 @@
 <template>
-  <div>
-    Compression {{ data }} ?
-  </div>
+  <tr>
+    <td>Compression</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
+
 
 <script type = "text/javascript">
 export default {

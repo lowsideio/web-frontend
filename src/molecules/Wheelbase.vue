@@ -1,7 +1,8 @@
 <template>
-  <div>
-    Wheelbase {{ data }} ?
-  </div>
+  <tr>
+    <td>Wheelbase</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
 
 <script type = "text/javascript">

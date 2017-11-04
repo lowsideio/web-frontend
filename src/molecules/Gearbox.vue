@@ -1,6 +1,8 @@
 <template>
-  <div>
-    Gearbox {{ data }} ?
+  <div class="container">
+    <div class="data">{{ data }}</div>
+    <div class="illustration" />
+    <div class="data">Gearbox</div>
   </div>
 </template>
 
@@ -12,6 +14,26 @@ export default {
 </script>
 
 <style scoped>
+
+.container {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.data {
+  font-size: 2rem;
+}
+
+.data, .illustration {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.illustration {
+  background-image: url('/static/icons/motorcycle-parts/gearbox.svg');
+  height: 3rem;
+  width: 3rem;
+}
 
 
 </style>

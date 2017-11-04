@@ -1,8 +1,10 @@
 <template>
-  <div>
-    FuelControl {{ data }} ?
-  </div>
+  <tr>
+    <td>Fuel Control</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
+
 
 <script type = "text/javascript">
 export default {

@@ -1,7 +1,8 @@
 <template>
-  <div>
-    FrontWheelTravel {{ data }} ?
-  </div>
+  <tr>
+    <td>Front Wheel Travel</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
 
 <script type = "text/javascript">
