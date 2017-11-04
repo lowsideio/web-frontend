@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+
 import MainSearch from '@/components/MainSearch';
+import MotorcycleDetail from '@/pages/MotorcycleDetail';
 
 Vue.use(Router);
 
@@ -10,6 +12,11 @@ export default new Router({
       path: '/',
       name: 'MainSearch',
       component: MainSearch,
+    },
+    {
+      path: '/motorcycles/:slug',
+      name: 'MotorcycleDetail',
+      component: MotorcycleDetail,
     },
   ],
 });
