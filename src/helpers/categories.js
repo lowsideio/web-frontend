@@ -1,5 +1,5 @@
 
-const basePath = 'static/categories';
+const basePath = '/static/categories';
 
 const illustration = (category) => {
   switch (category) {
@@ -20,7 +20,7 @@ const illustration = (category) => {
 
     case 'MINI': return `${basePath}/mini.svg`;
 
-    case 'UNKNOWN': return 'static/icons/unknown.png';
+    case 'UNKNOWN': return '/static/icons/unknown.png';
 
     default: return null;
   }
