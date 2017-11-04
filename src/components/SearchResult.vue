@@ -1,29 +1,31 @@
 
 <template>
-  <div class="container">
-    <div class="brand">
-      <div
-        class="brand-logo"
+  <router-link v-bind:to="`/motorcycles/${motorcycle.slug}`">
+    <div class="container">
+      <div class="brand">
+        <div
+          class="brand-logo"
 
-        v-if="this.getLogo(motorcycle.brand)"
-        v-bind:style="{ backgroundImage: `url(${this.getLogo(motorcycle.brand)})` }"
-      />
-      <div
-        class="brand-no-logo"
+          v-if="this.getLogo(motorcycle.brand)"
+          v-bind:style="{ backgroundImage: `url(${this.getLogo(motorcycle.brand)})` }"
+        />
+        <div
+          class="brand-no-logo"
 
-        v-else
-      />
-    </div>
-    <div class="info">
-      <div class="model">
-        <div class="brand-name">{{ motorcycle.brand }}</div>
-        {{ motorcycle.model }}
+          v-else
+        />
+      </div>
+      <div class="info">
+        <div class="model">
+          <div class="brand-name">{{ motorcycle.brand }}</div>
+          {{ motorcycle.model }}
+        </div>
+      </div>
+      <div class="category">
+        <img v-bind:src="this.getCategoryIllustration(motorcycle.category)" />
       </div>
     </div>
-    <div class="category">
-      <img v-bind:src="this.getCategoryIllustration(motorcycle.category)" />
-    </div>
-  </div>
+  </router-link>
 </template>
 
 <script type = "text/javascript" >
@@ -50,6 +52,16 @@ export default {
     margin: 0 auto;
     margin-top: .5rem;
     overflow: visible;
+  }
+
+  .container:hover {
+    background-color: rgb(32, 164, 243);
+
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+
+    cursor: pointer;
   }
 
   .brand-no-logo {
