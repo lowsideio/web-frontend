@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <img src="./assets/lowside-logo-blank.svg">
+    <router-link to="/">
+      <h1>lowside.io</h1>
+    </router-link>
     <router-view />
   </div>
 </template>
@@ -27,6 +30,13 @@ a { color: inherit; }
 
 
 <style scoped>
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+  h1 {
+    color: #20a4f3;
+  }
   img {
     height: 128px;
     width: 128px;
