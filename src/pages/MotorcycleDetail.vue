@@ -1,50 +1,78 @@
 <template>
-  <div class="hello">
-    <h1>lowside.io</h1>
-    {{ $route.params.slug }}
+  <div class="container">
     <div>{{this.error.message}}</div>
 
-    {{ this.loading ? 'loading' : 'not loading' }}
+    {{ this.loading ? 'loading' : '' }}
 
-    {{ selectedSpec }}
     <div v-if="specs && specs[selectedSpec]">
-      <Bore v-bind:data="specs[selectedSpec].bore" />
-      <Cc v-bind:data="specs[selectedSpec].cc" />
-      <Clutch v-bind:data="specs[selectedSpec].clutch" />
-      <Cooling v-bind:data="specs[selectedSpec].cooling" />
-      <DryWeight v-bind:data="specs[selectedSpec].dryWeight" />
-      <EngineType v-bind:data="specs[selectedSpec].engineType" />
-      <FrameType v-bind:data="specs[selectedSpec].frameType" />
-      <FrontBrakes v-bind:data="specs[selectedSpec].frontBrakes" />
-      <FrontBrakesDiameter v-bind:data="specs[selectedSpec].frontBrakesDiameter" />
-      <FrontSuspension v-bind:data="specs[selectedSpec].frontSuspension" />
-      <FrontWheelTravel v-bind:data="specs[selectedSpec].frontWheelTravel" />
-      <FuelCapacity v-bind:data="specs[selectedSpec].fuelCapacity" />
-      <FuelControl v-bind:data="specs[selectedSpec].fuelControl" />
-      <FuelSystem v-bind:data="specs[selectedSpec].fuelSystem" />
-      <Gearbox v-bind:data="specs[selectedSpec].gearbox" />
-      <Ignition v-bind:data="specs[selectedSpec].ignition" />
-      <Power v-bind:data="specs[selectedSpec].power" />
-      <RearBrakes v-bind:data="specs[selectedSpec].rearBrakes" />
-      <RearBrakesDiameter v-bind:data="specs[selectedSpec].rearBrakesDiameter" />
-      <RearSuspension v-bind:data="specs[selectedSpec].rearSuspension" />
-      <RearWheelTravel v-bind:data="specs[selectedSpec].rearWheelTravel" />
-      <SeatHeight v-bind:data="specs[selectedSpec].seatHeight" />
-      <Starter v-bind:data="specs[selectedSpec].starter" />
-      <Stroke v-bind:data="specs[selectedSpec].stroke" />
-      <Transmission v-bind:data="specs[selectedSpec].transmission" />
-      <Wheelbase v-bind:data="specs[selectedSpec].wheelbase" />
-      <Year v-bind:data="specs[selectedSpec].year" />
-      <Compression v-bind:data="specs[selectedSpec].compression" />
-      <GroundClearence v-bind:data="specs[selectedSpec].groundClearence" />
-      <Lubrification v-bind:data="specs[selectedSpec].lubrification" />
-      <OverallHeight v-bind:data="specs[selectedSpec].overallHeight" />
-      <OverallLength v-bind:data="specs[selectedSpec].overallLength" />
-      <OverallWidth v-bind:data="specs[selectedSpec].overallWidth" />
-      <PowerWeight v-bind:data="specs[selectedSpec].powerWeight" />
-      <Price v-bind:data="specs[selectedSpec].price" />
-      <RearTyre v-bind:data="specs[selectedSpec].rearTyre" />
-      <Torque v-bind:data="specs[selectedSpec].torque" />
+
+      <div>
+        <h2 class="model">{{ model }}</h2>
+        <Year v-bind:data="specs[selectedSpec].year" />
+      </div>
+
+      <hr />
+      <div style="text-align:center">
+        <Cc v-bind:data="specs[selectedSpec].cc" />
+        <Power v-bind:data="specs[selectedSpec].power" />
+        <DryWeight v-bind:data="specs[selectedSpec].dryWeight" />
+      </div>
+      <hr />
+      <div>
+        <Cooling v-bind:data="specs[selectedSpec].cooling" />
+      </div>
+      <hr />
+      <div style="text-align:center">
+        <Gearbox v-bind:data="specs[selectedSpec].gearbox" />
+        <Transmission v-bind:data="specs[selectedSpec].transmission" />
+      </div>
+      <hr />
+      <div>
+        <Starter v-bind:data="specs[selectedSpec].starter" />
+      </div>
+      <hr />
+      <div>
+        <FuelCapacity v-bind:data="specs[selectedSpec].fuelCapacity" />
+        <FuelSystem v-bind:data="specs[selectedSpec].fuelSystem" />
+      </div>
+      <hr />
+      <div>
+        <GroundClearence v-bind:data="specs[selectedSpec].groundClearence" />
+      </div>
+      <hr />
+
+      <table>
+        <tr>
+          <th>x</th>
+          <th>value</th>
+        </tr>
+        <Bore v-bind:data="specs[selectedSpec].bore" />
+        <Clutch v-bind:data="specs[selectedSpec].clutch" />
+        <EngineType v-bind:data="specs[selectedSpec].engineType" />
+        <FrameType v-bind:data="specs[selectedSpec].frameType" />
+        <FrontBrakes v-bind:data="specs[selectedSpec].frontBrakes" />
+        <FrontBrakesDiameter v-bind:data="specs[selectedSpec].frontBrakesDiameter" />
+        <FrontSuspension v-bind:data="specs[selectedSpec].frontSuspension" />
+        <FrontWheelTravel v-bind:data="specs[selectedSpec].frontWheelTravel" />
+        <FuelControl v-bind:data="specs[selectedSpec].fuelControl" />
+        <Ignition v-bind:data="specs[selectedSpec].ignition" />
+        <RearBrakes v-bind:data="specs[selectedSpec].rearBrakes" />
+        <RearBrakesDiameter v-bind:data="specs[selectedSpec].rearBrakesDiameter" />
+        <RearSuspension v-bind:data="specs[selectedSpec].rearSuspension" />
+        <RearWheelTravel v-bind:data="specs[selectedSpec].rearWheelTravel" />
+        <SeatHeight v-bind:data="specs[selectedSpec].seatHeight" />
+        <Stroke v-bind:data="specs[selectedSpec].stroke" />
+        <Wheelbase v-bind:data="specs[selectedSpec].wheelbase" />
+        <Compression v-bind:data="specs[selectedSpec].compression" />
+        <Lubrification v-bind:data="specs[selectedSpec].lubrification" />
+        <OverallHeight v-bind:data="specs[selectedSpec].overallHeight" />
+        <OverallLength v-bind:data="specs[selectedSpec].overallLength" />
+        <OverallWidth v-bind:data="specs[selectedSpec].overallWidth" />
+        <PowerWeight v-bind:data="specs[selectedSpec].powerWeight" />
+        <Price v-bind:data="specs[selectedSpec].price" />
+        <RearTyre v-bind:data="specs[selectedSpec].rearTyre" />
+        <Torque v-bind:data="specs[selectedSpec].torque" />
+      </table>
     </div>
 
   </div>
@@ -154,7 +182,7 @@ export default {
 
       axios.get(`${process.env.API_URL}/motorcycles/slug/${this.$route.params.slug}`)
       .then((response) => {
-        console.log('yay', response.data.id);
+        this.model = response.data.model;
         axios.get(`${process.env.API_URL}/motorcycles-specs/${response.data.id}`)
         .then((specsResponse) => {
           this.loading = false;
@@ -171,24 +199,20 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+
+* {
   color: #f6f7f8;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
+.model {
+  text-align: center;
 }
 
-a {
-  color: #42b983;
-}
 </style>
