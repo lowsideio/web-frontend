@@ -1,7 +1,8 @@
 <template>
-  <div>
-    Clutch {{ data }} ?
-  </div>
+  <tr>
+    <td>Clutch</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
 
 <script type = "text/javascript">

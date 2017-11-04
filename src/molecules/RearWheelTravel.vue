@@ -1,8 +1,10 @@
 <template>
-  <div>
-    RearWheelTravel {{ data }} ?
-  </div>
+  <tr>
+    <td>Rear Wheel Travel</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
+
 
 <script type = "text/javascript">
 export default {

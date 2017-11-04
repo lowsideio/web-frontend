@@ -1,7 +1,8 @@
 <template>
-  <div>
-    Lubrification {{ data }} ?
-  </div>
+  <tr>
+    <td>Lubrification</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
 
 <script type = "text/javascript">

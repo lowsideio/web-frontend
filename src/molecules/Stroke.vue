@@ -1,8 +1,10 @@
 <template>
-  <div>
-    Stroke {{ data }} ?
-  </div>
+  <tr>
+    <td>Stroke</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
+
 
 <script type = "text/javascript">
 export default {

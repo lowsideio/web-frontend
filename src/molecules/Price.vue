@@ -1,7 +1,8 @@
 <template>
-  <div>
-    Price {{ data }} ?
-  </div>
+  <tr>
+    <td>Price</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
 
 <script type = "text/javascript">

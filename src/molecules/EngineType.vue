@@ -1,7 +1,8 @@
 <template>
-  <div>
-    EngineType {{ data }} ?
-  </div>
+  <tr>
+    <td>Engine type</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
 
 <script type = "text/javascript">

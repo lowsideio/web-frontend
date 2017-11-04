@@ -1,8 +1,10 @@
 <template>
-  <div>
-    FrontBrakesDiameter {{ data }} ?
-  </div>
+  <tr>
+    <td>Front brakes diameter</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
+
 
 <script type = "text/javascript">
 export default {

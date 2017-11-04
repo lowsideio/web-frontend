@@ -1,8 +1,10 @@
 <template>
-  <div>
-    OverallHeight {{ data }} ?
-  </div>
+  <tr>
+    <td>Overall Height</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
+
 
 <script type = "text/javascript">
 export default {

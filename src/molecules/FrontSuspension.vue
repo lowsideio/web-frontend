@@ -1,7 +1,8 @@
 <template>
-  <div>
-    FrontSuspension {{ data }} ?
-  </div>
+  <tr>
+    <td>Front Suspension</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
 
 <script type = "text/javascript">

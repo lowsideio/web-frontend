@@ -1,7 +1,8 @@
 <template>
-  <div>
-    SeatHeight {{ data }} ?
-  </div>
+  <tr>
+    <td>Seat Height</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
 
 <script type = "text/javascript">

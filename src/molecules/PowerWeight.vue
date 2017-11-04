@@ -1,7 +1,8 @@
 <template>
-  <div>
-    PowerWeight {{ data }} ?
-  </div>
+  <tr>
+    <td>Power Weight</td>
+    <td>{{ data }}</td>
+  </tr>
 </template>
 
 <script type = "text/javascript">

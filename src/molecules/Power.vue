@@ -1,6 +1,7 @@
 <template>
-  <div>
-    Power {{ data }} ?
+  <div class="container">
+    <div class="illustration" />
+    <div class="size">{{ data }}</div>ps/cv
   </div>
 </template>
 
@@ -13,5 +14,24 @@ export default {
 
 <style scoped>
 
+.container {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.size {
+  font-size: 2rem;
+}
+
+.size, .illustration {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.illustration {
+  background-image: url('/static/icons/motorcycle-parts/power.svg');
+  height: 3rem;
+  width: 3rem;
+}
 
 </style>
