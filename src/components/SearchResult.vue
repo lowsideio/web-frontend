@@ -2,7 +2,17 @@
 <template>
   <div class="container">
     <div class="brand">
-      <div class="brand-logo" v-bind:style="{ backgroundImage: `url(${this.getLogo(motorcycle.brand)})` }" />
+      <div
+        class="brand-logo"
+
+        v-if="this.getLogo(motorcycle.brand)"
+        v-bind:style="{ backgroundImage: `url(${this.getLogo(motorcycle.brand)})` }"
+      />
+      <div
+        class="brand-no-logo"
+
+        v-else
+      />
     </div>
     <div class="info">
       <div class="model">
@@ -42,7 +52,11 @@ export default {
     overflow: visible;
   }
 
-  .brand-logo {
+  .brand-no-logo {
+    background-image: url('/static/icons/unknown.png');
+  }
+
+  .brand-logo, .brand-no-logo {
     display: inline-block;
 
     width: 50%;
