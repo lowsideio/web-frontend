@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import MainSearch from '@/components/MainSearch';
+import MainSearch from '@/pages/MainSearch';
 import MotorcycleDetail from '@/pages/MotorcycleDetail';
 
 Vue.use(Router);
