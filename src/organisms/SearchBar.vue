@@ -55,6 +55,7 @@ export default {
 
 input {
   min-width: 60%;
+  max-width: 100%;
   height: 3rem;
   font-size: 2.8rem;
   font-weight: lighter;

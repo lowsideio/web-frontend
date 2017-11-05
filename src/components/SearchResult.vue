@@ -133,5 +133,32 @@ export default {
     display: inline-block;
   }
 
+  @media screen and (max-device-width: 736px) {
+    .container {
+      width: 78%;
+    }
+  }
+
+  @media screen and (max-device-width: 414px) and (max-device-height: 776px) {
+    .container {
+      width: 100vw;
+    }
+
+    .info {
+      padding-left: 1rem;
+      padding-right: calc(25% - 2rem);
+      width: calc(60% - 2rem);
+    }
+
+    .category {
+      position: absolute;
+
+      height: 100%;
+      min-width: 3rem;
+
+      right: 0;
+      top: 0;
+    }
+  }
 
 </style>
