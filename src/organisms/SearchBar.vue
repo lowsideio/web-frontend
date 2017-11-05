@@ -2,8 +2,8 @@
   <div>
     <input v-model="inputValue" type="text" @input="search()">
     <div class="sponsor-algolia">
-      <a href="https://algolia.com" target="_blank">
-        <img src="/static/sponsors/search-by-algolia-white.png" />
+      <a rel="noopener" href="https://algolia.com" target="_blank">
+        <img alt="algolia-logo" src="/static/sponsors/search-by-algolia-white.png" />
       </a>
     </div>
     {{/* Display results */}}
@@ -55,6 +55,7 @@ export default {
 
 input {
   min-width: 60%;
+  max-width: 100%;
   height: 3rem;
   font-size: 2.8rem;
   font-weight: lighter;
