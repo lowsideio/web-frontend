@@ -21,7 +21,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -29,7 +29,17 @@ export default {
   margin-top: 60px;
 }
 
+body: {
+  margin: 0;
+}
 a { color: inherit; }
+
+@media screen and (max-device-width: 414px) and (max-device-height: 776px) {
+  .container {
+    width: 100vw;
+  }
+}
+
 
 </style>
 
