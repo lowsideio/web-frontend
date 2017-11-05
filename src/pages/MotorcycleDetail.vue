@@ -187,7 +187,6 @@ export default {
         .then((specsResponse) => {
           this.loading = false;
           this.specs = specsResponse.data;
-          console.log('specs', this.specs[0]);
         });
       })
       .catch((e) => {
