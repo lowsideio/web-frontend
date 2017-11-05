@@ -4,11 +4,9 @@
 
 This web client allows the user to search the database.
 
-<br />
-<br />
-<br />
-<br />
-<br />
+#### lighthouse audit
+![lighthouse-performance](./illustrations/performance.png)
+
 <hr />
 
 # Preview
