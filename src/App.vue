@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/lowside-logo-blank.svg">
+    <img alt="lowside-logo" src="./assets/lowside-logo-blank.svg">
     <router-link to="/">
       <h1>lowside.io</h1>
     </router-link>

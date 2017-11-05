@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="category">
-        <img v-bind:src="this.getCategoryIllustration(motorcycle.category)" />
+        <img alt="category illustration" v-bind:src="this.getCategoryIllustration(motorcycle.category)" />
       </div>
     </div>
   </router-link>
