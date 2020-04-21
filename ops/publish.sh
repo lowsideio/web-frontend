@@ -1,1 +1,1 @@
-aws s3 sync build/ s3://lowside.aksels.app
+aws s3 sync dist/ s3://lowside.aksels.app
